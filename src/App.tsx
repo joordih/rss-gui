@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 
-import IndexPage from "@/pages/index";
+// @ts-ignore
+import IndexPage from "@/pages/index.tsx";
+import HomePage from "@/pages/home.tsx";
 import DocsPage from "@/pages/docs";
 import PricingPage from "@/pages/pricing";
 import BlogPage from "@/pages/blog";
@@ -10,7 +12,7 @@ import SP500Page from "@/pages/sp500";
 function App() {
   return (
     <Routes>
-      <Route element={<IndexPage />} path="/" />
+      <Route element={<HomePage />} path="/" />
       <Route element={<SP500Page />} path="/sp500" />
       <Route element={<DocsPage />} path="/docs" />
       <Route element={<PricingPage />} path="/pricing" />

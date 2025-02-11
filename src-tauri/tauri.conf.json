@@ -12,9 +12,9 @@
   "app": {
     "windows": [
       {
-        "title": "rss-gui",
-        "width": 1280,
-        "height": 720,
+        "title": "INNVEST - BUILD vN08-1099",
+        "width": 1920,
+        "height": 1080,
         "resizable": true,
         "fullscreen": false
       }
