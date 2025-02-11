@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  width: 195px;
+  height: 285px;
+  background: rgba(49, 49, 49, 50%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: 0.2s ease-in-out;
+  position: relative;
+  cursor: pointer;
+
+  :hover {
+    background-color: rgba(49, 49, 49, 80%);
+    border-radius: 20px;
+  }
+}
+
+.img {
+  height: 60%;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+}
+
+.textBox {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+  gap: 0em;
+  padding: 1em;
+  z-index: 5;
+  transition: 0.2s ease-in-out;
+}
+
+.textBox > .head {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.textBox > .price {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.textBox > .discription {
+  font-size: 0.8em;
+  color: lightgrey;
+  font-weight: light;
+}
+
+.card:hover > .textBox {
+  opacity: 1;
+  gap: 0.5em;
+}
+
+.card:hover > .img {
+  filter: blur(3px);
+  animation: anim 3s infinite ease-in-out;
+}
+
+@keyframes anim {
+  50% {
+    transform: translateY(-10%) rotate(5deg);
+  }
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
